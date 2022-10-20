@@ -1,0 +1,4 @@
+/publica
+/adm
+/ven
+/sec

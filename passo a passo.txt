@@ -1,0 +1,29 @@
+excluir diretorio e usuarios indevidos
+    sudo rmdir rm -fr
+    passwd
+    userdel -r
+    usuarios = carlos,maria,joao,
+    debora,sebastiana,roberto,
+    josefia,amanda,rogerio
+dono dos diretorios será root
+    diretorio = /publico /adm /ven /sec
+    sudo mkdir ......
+chmod 777 para seu respectivo diretorio
+    sudo chmod .... 777 ....
+usuario nao pode ter permissao em outro depto
+    grupos GRP_ADM GRP_VEN GRP_SEC
+    group
+subir no git
+mandar linkedin (https://www.linkedin.com/in/denilsonbonatti/)
+
+
+primeiro limpar dados que não serão usados
+ useradd .... -m -s /bin/bash -p $(openssl passwd -crypt ......) -G GRP_ADM
+ chown root:Grp_Adm /adm
+ chmod 770 /adm
+ ln -s /adm CompartilhamentoAdm
+ cat passwd
+ cat /etc/group
+ ls -la
+ 
+ 
