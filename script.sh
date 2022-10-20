@@ -12,7 +12,7 @@ for counterg in  $(seq 1 $(($tamgrupo+1)))
 do
 linhag=`cat /home/renan/curso/groups.txt | head -$counterg | tail -1`
 echo "grupo adicionado: $linhag"
-#groupadd -g 999$counterg $linhag
+groupadd -g 999$counterg $linhag
 done
 
 #criando diretorios
@@ -22,7 +22,7 @@ for counterd in  $(seq 1 $(($tamdir+1)))
 do
 linhad=`cat /home/renan/curso/diretorios.txt | head -$counterd | tail -1`
 echo "diretorio criado: $linhad"
-#`mkdir $linhad`
+`mkdir $linhad`
 done
 
 #dando permissao em diretorios grupos
@@ -42,19 +42,19 @@ for counter in  $(seq 1 $(($tamanho-5)))
 do
 linha=`cat /home/renan/curso/users.txt | head -$counter | tail -1`
 echo "usuarios administradores: $linha"
-#useradd $linha -m -s /bin/bash -p $(openssl passwd $linha123@mudar) -G GRP_ADM
+useradd $linha -m -s /bin/bash -p $(openssl passwd $linha123@mudar) -G GRP_ADM
 done
 
 for counter in  $(seq 4 $(($tamanho-2)))
 do
 linha=`cat /home/renan/curso/users.txt | head -$counter | tail -1`
 echo "usuarios vendedores: $linha"
-#useradd $linha -m -s /bin/bash -p $(openssl passwd $linha123@mudar) -G GRP_VEN
+useradd $linha -m -s /bin/bash -p $(openssl passwd $linha123@mudar) -G GRP_VEN
 done
 
 for counter in  $(seq 6 $(($tamanho)))
 do
 linha=`cat /home/renan/curso/users.txt | head -$counter | tail -1`
 echo "usuarios secretariados: $linha"
-#useradd $linha -m -s /bin/bash -p $(openssl passwd $linha123@mudar) -G GRP_SEC
+useradd $linha -m -s /bin/bash -p $(openssl passwd $linha123@mudar) -G GRP_SEC
 done
